@@ -1,0 +1,29 @@
+@font-face {font-family: 'Geo'; src: url('./geo_.woff');}
+
+@media (max-width:800px) {
+  .row {width: 90%; padding: 0px 10px;}
+}
+
+@media (min-width:800px) {
+  .row {width: 50%;}
+}
+
+html, body {min-height: 100%; width: 100%; margin: 0; padding: 0; border: 0; font-family: 'Geo', arial; font-size: 16px; overflow: hidden;}
+a {color: black; text-decoration: none;}
+::selection {background: #7b00ff; color: white;}
+
+.row {text-align: left; margin: 10px auto; line-height: 30px; word-spacing: 5px; max-width: 1024px; min-height: 50%;}
+#listener {padding: 7px; padding-left: 22px; font-family: 'Geo'; font-size: 100%; border: 1px solid #bbb;}
+  #listener:focus {outline: none; border-color: gray; border-radius: 1px;}
+#talker {line-height: normal; padding-top: 10px; padding-left: 10px;}
+#console {border: 1px solid gray; padding: 10px; max-width: 800px;}
+#sip {margin-left: 10px; margin-top: 1px; position: absolute; color: gray;}
+
+.shake {animation: shake 0.6s infinite;}
+
+@keyframes shake {
+  10%, 90% {transform: translate3d(-2px, 0, 0);}
+  20%, 80% {transform: translate3d(2px, 0, 0);}
+  30%, 50%, 70% {transform: translate3d(-4px, 0, 0);}
+  40%, 60% {transform: translate3d(4px, 0, 0);}
+}
