@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<link href="../2019/2016/data/oliverstasa.gif" rel="icon" type="image/x-icon">
+<link href="../sign.gif" rel="icon" type="image/x-icon">
 <title>Awesomer</title>
 <style>
 @font-face {font-family: 'Geo'; src: url('../Geo.woff');}
 body, html {font-family: 'Geo'; margin: 0; padding: 0; width: 100%; height: 100%;}
 #bob {height: 50px; width: 0px; background: black; float: left;}
-#done {display: none; width: 200px; height: 50px; text-align: center; background: url('../2019/2016/data/mad.gif');}
+#done {display: none; width: 200px; height: 50px; text-align: center; background: url('../mad.gif');}
 #border {padding: 5px; border: 1px solid black; width: 205px; text-align: left;}
 </style>
 

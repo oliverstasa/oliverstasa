@@ -27,7 +27,7 @@ $(document).ready(function() {
             if (read.match(/(look)/)) {loadme('look');} else
             if (read.match(/(awesome)/)) {loadme('awesome');} else
             if (read.match(/(video)/)) {loadme('video');} else
-            if (read.match(/(refs)/)) {writeme('WEB — if not outsourced, I work in team with Petr Chalupa — StaCha.dev, and designer Alina Matějová<br>› famufest.cz, alesfiala.com, siaspasse.com, migrace.phil.muni.cz, steamdecider.com, ecip.cz, …<br>›<br>› FILM — VIDEO<br>› FAMU, ČT, 13ka, Radim Procházka, Redlooks, author films...<br>› Kino ART, TIC Brno, Obligod, Ji-hlava, Anifilm, Žižkovská noc, trailers, music clips, making-of, reports, …');} else
+            if (read.match(/(refs)/)) {writeme('WEB — if not outsourced, I work in team with Petr Chalupa — StaCha.dev, and designer Alina Matějová<br>› famufest.cz, alesfiala.com, anetafasorova.cz, siaspasse.com, migrace.phil.muni.cz, steamdecider.com, …<br>›<br>› FILM — VIDEO<br>› FAMU, ČT, 13ka, Radim Procházka, Redlooks, author films...<br>› Kino ART, TIC Brno, Obligod, Ji-hlava, Anifilm, Žižkovská noc, trailers, music clips, making-of, reports, …');} else
             if (read.match(/(exit|dir|cd)/)) {writeme('have you played "memory of broken dimension"?<br>› if not, you should!<br>› do not forget to come back here - to dive');} else
             if (read.match(/(dive|remote|voidscan)/)) {writeme('ok, so you played MOBD!<br>› ...................<br>› remote<br>› ...................<br>› voidscan<br>› ...................<br>› ...................<br>› ...................<br>› diving now'); setTimeout(function(){$("#plate").addClass('shake');}, 1000); $("#plate").delay(2000).slideUp(5000, function(){$("#plate").removeClass('shake'); writeme(''); $("#plate").delay(2000).slideDown(500, function(){writeme('system safety preformed reset<br>› continue with HELP command');});});} else
             if (read.match(/(check|fb)/)) {writeme('facebook.com/oliver.stasa');} else
@@ -92,7 +92,7 @@ $(document).ready(function() {
                var top = ((height / 2) - (h / 2));
              setTimeout(function(){
                $("#listener").val("");
-               window.open("http://www.oliverstasa.cz/awesomer/", "Awesomer", 'scrollbars=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+               window.open("https://www.oliverstasa.cz/awesomer/", "Awesomer", 'scrollbars=no, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
              }, 1000);
           } else if (type == 'video' && $("#talker").html().substring(0, 10) != '<videator>') {
             writeme('no it doesn\'t work like this');
