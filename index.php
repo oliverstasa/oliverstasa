@@ -9,7 +9,7 @@
 <?php if (date('H') > 7 && date('H') < 17) {} else {echo '<link href="./night.css" rel="stylesheet">';} ?>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="web making, films, stills">
+<meta name="description" content="oliver.stasa@gmail.com 🍕 write me = don't call me → thank you">
 <meta name="keywords" content="Oliver Stasa, programmer, coder, filmmaker, photography">
 <meta name="author" content="Oliver Stasa">
 <meta name="robots" content="all">
@@ -28,7 +28,7 @@
 
 <div class="row" id="console">
   <div id="sip">›</div><input type="text" id="listener">
-  <div id="talker">› <i>type "help" for command list</i></div>
+  <div id="talker">› <i>oliver.stasa@gmail.com</i><br>› <i>type "help" for command list</i></div>
 </div>
 
 </div>
