@@ -7,7 +7,3 @@
 </FilesMatch>
 
 RewriteEngine On
-
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^/]+)/([^/]+)$ http://photographs.oliverstasa.cz/$1/$2 [L]

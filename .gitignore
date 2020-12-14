@@ -1,2 +1,4 @@
 .remote-sync.json
 .remote-sync_STACHA.json
+/bzd/*
+/stats
