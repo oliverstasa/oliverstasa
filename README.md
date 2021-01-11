@@ -1,3 +1,6 @@
+### Hello! 👾
+
+```
 const oliver = {
   code: ['JavaScript', 'PHP', 'MySQL', 'HTML', 'CSS'],
   tools: ['GIT', 'VS Code', 'Petr Chalupa'],
@@ -5,3 +8,4 @@ const oliver = {
     {'Hotline Miami': 'A+'}
   ]
 }
+```
