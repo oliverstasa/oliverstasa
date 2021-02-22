@@ -22,7 +22,7 @@ $(document).ready(function() {
             if (read.match(/(horse|lookatmyhorse)/)) {writeme('it´s amazing');} else
             if (read.match(/(hello|hi|what)/)) {writeme('hello!<br>›<br>› type help for command list');} else
             if (read.match(/(ico|ic|legal)/)) {writeme('0888 3793');} else
-            if (read.match(/(tech)/)) {writeme('fullstack, frontend, backend, coding, architecture, ux, ui<br>› PHP, JS (+jq, +ajax), CSS, HTML, MySQL<br>› GIT, w/ VScode or Atom<br>› server setup, ISP, linux<br>› paygates<br>›<br>› dop, 1st ac, 2nd ac, grader<br>› ARRI, RED, BM, SONY, AATON, Bolex, DSLRs, Atomos, Ronin, etc.<br>› <br>› Adobe, DaVinci Resolve<br>›<br>› Hotline Miami (A+)');} else
+            if (read.match(/(tech)/)) {writeme('fullstack, frontend, backend, coding, architecture, ux, ui<br>› PHP, Doctrine ORM, MySQL, JS, jQ, ajax, CSS, HTML<br>› GIT, w/ VScode or Atom<br>› server setup, ISP, linux<br>› paygates<br>›<br>› dop, 1st ac, 2nd ac, grader<br>› ARRI, RED, BM, SONY, AATON, Bolex, DSLRs, Atomos, Ronin, etc.<br>› <br>› Adobe, DaVinci Resolve<br>›<br>› Hotline Miami (A+)');} else
             if (read.match(/(draw)/)) {loadme('draw');} else
             if (read.match(/(look)/)) {loadme('look');} else
             if (read.match(/(awesome)/)) {loadme('awesome');} else
