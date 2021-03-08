@@ -1,0 +1,136 @@
+/*
+oh, hello!
+*/
+
+
+/*
+font import
+*/
+@font-face {font-family: 'SG'; src: url('../data/SpaceGrotesk.woff2');}
+
+
+/*
+global css
+*/
+* {font-family: 'SG'; font-display: fallback; font-size: 3vh;}
+*::selection {background: blue; color: white;}
+*::-webkit-scrollbar-track {background: transparent;}
+*::-webkit-scrollbar {width: 0.5vh; height: 0.5vh; background: transparent;}
+*::-webkit-scrollbar-thumb {background: black;}
+
+
+/*
+html
+*/
+html, body {min-height: 100%; width: 100%; margin: 0; padding: 0; border: 0; position: absolute; top: 0; left: 0; overflow: hidden; background: black; color: white;}
+
+
+/*
+a hrefs
+*/
+a, a:visited, .button {color: #ffff00; text-decoration: none; background: linear-gradient(90deg, #0000ff, #ff0000); background-size: 200%; background-position: left; -webkit-background-clip: text; -webkit-text-fill-color: transparent; transition: all 0.3s ease;}
+a:hover, .button:hover {color: #ff0000; background-position: right; cursor: pointer;}
+a::selection {background: rgba(75, 0, 255, 0.25);}
+
+
+/*
+grabber.js css
+*/
+.grabber {cursor: grab !important; user-select: none !important;}
+  .grabbed {cursor: grabbing !important;}
+
+
+/*
+boxes
+*/
+.box {width: 50vw; height: 100vh; display: table-cell; vertical-align: top; text-align: left;}
+#oli {width: 50vw; height: 100vh; --poster-color: transparent; --progress-bar-color: #0000ff; --progress-bar-height: 1vh; --progress-mask: transparent;}
+#console {padding: 3vh; width: calc(50vw - 6vh + 1px); height: calc(100vh - 6vh);}
+#log {width: calc(100% - 4vh); padding: 2vh; height: calc(100% - 14vh); overflow-y: scroll;}
+    #log::-webkit-scrollbar-thumb {background: transparent;}
+    .log span:first-child, .log i {color: gray;}
+    .log.cmd {color: blue; font-weight: bold;}
+    .log.cmd::selection {background: #ffff00; color: black;}
+#content {text-align: center; vertical-align: middle;}
+
+
+/*
+input terminal
+*/
+#terminal {background: black; color: white; border: 1px solid gray; outline: none; padding: 1vh 2vh 1vh 4.1vh; width: calc(100% - 6.1vh); caret-color: #0000ff; transition: all 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);}
+#terminal:focus {}
+  #slash {position: absolute; padding: 1vh 2vh; user-select: none;}
+
+
+/*
+whisper for terminal
+*/
+#whisp {position: absolute; top: 9vh; left: 3vh; width: calc(50vw - 10vh); padding: 1vh 2vh; background: black; color: white; display: none; max-height: 30vh; overflow-y: auto; border: 1px solid gray; border-top: none;}
+.whisp:hover {color: #0000ff; cursor: pointer;}
+
+
+/*
+loading dots
+*/
+.wait span {animation: wait 1s infinite;}
+  .wait span:nth-child(2) {animation-delay: 0.33s;}
+  .wait span:nth-child(3) {animation-delay: 0.66s;}
+@keyframes wait { 80% {opacity: 0;} 81% {opacity: 1;} }
+
+
+/*
+webcam
+*/
+#webcam {margin: 0 auto;}
+#webcam video {/*border: 1px solid gray; background: gray;*/}
+
+
+/*
+draw
+*/
+#draw table {margin: 0 auto; border-collapse: collapse;}
+#draw table tr td {padding: 0; margin: 0; width: 0.5vh; height: 0.5vh;}
+
+
+/*
+button
+*/
+/* same as a href */
+.button {margin-top: 3vh;}
+
+
+/*
+bubi + awesome
+*/
+.bubi span {animation: colors 6s infinite;}
+  .bubi span:nth-child(9n+1) {animation-delay: -2s;}
+  .bubi span:nth-child(9n+2) {animation-delay: -3s;}
+  .bubi span:nth-child(9n+3) {animation-delay: -4s;}
+  .bubi span:nth-child(9n+4) {animation-delay: -5s;}
+  .bubi span:nth-child(9n+5) {animation-delay: -6s;}
+  .bubi span:nth-child(9n+6) {animation-delay: -7s;}
+  .bubi span:nth-child(9n+7) {animation-delay: -8s;}
+  .bubi span:nth-child(9n+8) {animation-delay: -9s;}
+  .bubi span:nth-child(9n+0) {animation-delay: -1s;}
+.awesome {animation: colors 2s infinite;}
+@keyframes colors { 0% {color: red;} 20% {color: blue;} 40% {color: #00ff00;} 60% {color: #4200f8;} 80% {color: pink;} 100% {color: red;} }
+
+
+/*
+mobile version adjustments
+*/
+@media (max-aspect-ratio: 1/1) {
+
+    html, body {overflow: auto;}
+    .box {width: 100vw; height: 50vh; display: inline-block;}
+    #console {width: calc(100vw - 6vh); height: calc(50vh - 6vh);}
+    #whisp {width: calc(100vw - 11vh + 1px);}
+    #oli {width: 100vw; height: 50vh;}
+
+    #terminal {width: calc(100% - 7vh) !important;}
+    #log {width: calc(100% - 2vh) !important; height: calc(100% - 7vh) !important;}
+
+    #draw {margin-top: 5vh;}
+    #draw table tr td {width: 0.5vw; height: 0.5vw;}
+  
+}
