@@ -60,7 +60,7 @@ search for written content
 */
 $(document).on('keyup', '#terminal', function(e){
 
-    var search = $(this).val(),
+    var search = $(this).val().toLowerCase(),
         key = e.keyCode || e.which;
 
     // if enter or arrow down
@@ -279,6 +279,14 @@ $(window).on('load', function(){
 
 
 /*
+camera list = change source
+*/
+$(document).on('change', '.camList', function(){
+    alert('a');
+});
+
+
+/*
 content switch
 */
 function content(content) {
@@ -307,7 +315,7 @@ function content(content) {
                     $('head').append('<script type="text/javascript" src="./js/talkify.js"></script>');
                 }
 
-                $('#content').append('<div id="webcam" class="plugin"></div><div class="button stop plugin">[quit]</div>');
+                $('#content').append('<div id="webcam" class="plugin"></div><div class="button stop plugin">[quit]</div><!--<div class="plugin"><select class="camList"></select></div>-->');
                 
                 // vars
                 var win = {'h': $(window).height(),
@@ -320,8 +328,10 @@ function content(content) {
                 if (!window.facingCam) {
                     if (win.h > win.w) {
                         window.facingCam = 'environment';
+                        window.facingCam = 1;
                     } else {
                         window.facingCam = 'user';
+                        window.facingCam = 0;
                     }
                 }
 
@@ -332,13 +342,32 @@ function content(content) {
                     camSize = {'h': win.h/2.5-6*wDim.vh, 'w': win.w-6*wDim.vh};
                 }
 
+                // get cameras
+                var cam = new Array(),
+                    d = 0;
+
+                    
+                navigator.mediaDevices.enumerateDevices().then(function(devices) {
+                    devices.forEach(function(device) {
+                        if (device.kind === "videoinput") {
+                            cam[d]= device.deviceId;
+                            console.log(cam[d]);
+                            //$('.camList').append('<option name="'+d+'">'+device.label+'</option>');
+                            d++;
+                        }
+                    });
+                });
+
+                var useCamera = cam[cam.length-1];
+
                 // start the webcam
                 Webcam.set({
                     width: camSize.w,
                     height: camSize.h,
                     image_format: 'jpeg',
                     jpeg_quality: 90,
-                    constraints: {facingMode: {exact: window.facingCam}}
+                    sourceId: useCamera
+                    // constraints: {facingMode: {exact: window.facingCam}}
                 });
                 Webcam.attach('#webcam');
 

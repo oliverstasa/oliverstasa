@@ -1,5 +1,7 @@
 .remote-sync.json
 .remote-sync_STACHA.json
-/bzd/*
+/bzd/
 /stats
 /data/webcam
+/data/
+/2018-2021
